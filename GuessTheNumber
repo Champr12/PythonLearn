@@ -1,0 +1,14 @@
+# setting the variables
+secret_number = 9
+guess_count = 0
+guess_limit = 3
+
+# the program will keep asking for the number until the guess limit, if the user guests correct the loop breaks
+while guess_count < guess_limit:
+    guess = int(input('Guess: '))
+    guess_count += 1
+    if guess == secret_number:
+        print('You won!')
+        break
+else:
+    print('Sorry, you failed!')
