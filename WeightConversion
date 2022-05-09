@@ -1,0 +1,11 @@
+# ask user weight's input in kg or lbs
+weight = int(input('Weight: '))
+metric = input('(L)bs or (K)g: ')
+
+# converts the weight to the other unit
+if metric.upper() == 'L':
+    weight *= 0.45
+    print(f'You are {weight} kilos')
+elif metric.upper() == 'K':
+    weight /= 0.45
+    print (f'You are {weight} lbs')
