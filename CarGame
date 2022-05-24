@@ -1,0 +1,40 @@
+# initial attempt
+user_input = input('>')
+
+while True:
+    if user_input == 'help':
+        print('start - to start the car')
+        print('stop - to stop the car')
+        print('quit - to exit')
+        user_input2 = input('>')
+        if user_input2 == 'start':
+            print('car start')
+        elif user_input2 == 'stop':
+            print('car stop')
+        elif user_input2 == 'quit':
+            break
+    else:
+        print("I don't understand that...")
+        user_input = input('>')
+		
+
+# final attempt
+user_input = input('>')
+
+while True:
+    if user_input.upper() == 'HELP':
+        print('start - to start the car')
+        print('stop - to stop the car')
+        print('quit - to exit')
+        user_input = input('>')
+    elif user_input.upper() == 'START':
+        print('Car started...Ready to go!')
+        user_input = input('>')
+    elif user_input.upper() == 'STOP':
+        print('Car stopped.')
+        user_input = input('>')
+    elif user_input.upper() == 'QUIT':
+        break
+    else:
+        print("I don't understand that...")
+        user_input = input('>')
