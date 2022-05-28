@@ -1,0 +1,56 @@
+# final attempt
+command = ""
+startRepeat = 0
+stopRepeat = 0
+while True:
+    command = input("> ").lower()
+    if command == "start" and startRepeat > 1:
+        print("The car is already started.")
+    elif command == "stop" and stopRepeat > 1:
+        print("The car is already stopped.")
+    elif command == "start":
+        print("Car start...")
+        startRepeat = 1
+        startRepeat += 1
+    elif command == "stop":
+        print("Car stopped.")
+        stopRepeat = 1
+        stopRepeat += 1
+    elif command == "help":
+        print("""
+start - to start the car
+stop - to stop the car
+quit - to quit
+        """)
+    elif command == "quit":
+        break
+    else:
+        print("Sorry, I don't understand that!")
+
+# solution
+command = ""
+started = False
+while True:
+    command = input("> ").lower()
+    if command == "start":
+        if started:
+            print("Car is already started!")
+        else:
+            started = True
+            print("Car start...")
+    elif command == "stop":
+        if not started:
+            print("Car is already stopped!")
+        else:
+            started = False
+            print("Car stopped.")
+    elif command == "help":
+        print("""
+start - to start the car
+stop - to stop the car
+quit - to quit
+        """)
+    elif command == "quit":
+        break
+    else:
+        print("Sorry, I don't understand that!")
